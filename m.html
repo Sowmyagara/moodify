@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Moodify 🎧</title>
+  <link rel="stylesheet" href="m.css">
+</head>
+<body>
+
+<h1>Moodify 🎧</h1>
+<button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+<br><br>
+
+<select id="language" onchange="changeLanguage()">
+  <option value="telugu">తెలుగు</option>
+  <option value="hindi">Hindi</option>
+  <option value="english">English</option>
+</select>
+
+<div class="moods">
+  <button onclick="selectMood('happy')">😊 Happy</button>
+  <button onclick="selectMood('sad')">😢 Sad</button>
+  <button onclick="selectMood('angry')">😡 Angry</button>
+  <button onclick="selectMood('relaxed')">😌 Relaxed</button>
+</div>
+
+<select id="genre" onchange="loadSongList()">
+  <option value="all">All Genres 🎭</option>
+  <option value="melody">Melody</option>
+  <option value="romantic">Romantic</option>
+  <option value="mass">Mass</option>
+  <option value="sad">Sad</option>
+  <option value="peace">Peace</option>
+</select>
+
+<h3 id="songName">Select a mood</h3>
+<ul id="songList"></ul>
+
+<audio id="audio" controls></audio>
+
+<div class="controls">
+  <button onclick="prevSong()">⏮</button>
+  <button onclick="togglePlay()">⏯</button>
+  <button onclick="nextSong()">⏭</button>
+</div>
+
+<input type="range" id="progress" value="0">
+
+<br><br>
+Volume:
+<input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+
+<h3>📜 Lyrics</h3>
+<div id="lyrics" class="lyrics-box">Select a song to view lyrics</div>
+
+<script src="m.js"></script>
+</body>
+</html>
